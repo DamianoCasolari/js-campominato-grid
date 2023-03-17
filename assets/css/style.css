@@ -1,0 +1,22 @@
+#app_header {
+    height: 150px;
+}
+
+#app_main {
+    height: calc(100vh - 250px);
+}
+
+#app_footer {
+    height: 100px;
+}
+
+.my_background {
+    background-color: #7fffd4;
+
+}
+
+.cell {
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+    border: 1px solid;
+}
