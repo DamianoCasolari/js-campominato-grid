@@ -27,12 +27,12 @@ buttonEl.addEventListener("click", function () {
         changeBackground(arrayCell)
     } else if (selectEl.value == "medium_lv") {
         difficulty(medium);
-        changeBackground()
-        console.log(numberElement);
+        const arrayCell = document.querySelectorAll(".single_cell")
+        changeBackground(arrayCell)
     } else {
         difficulty(hard);
-        changeBackground()
-        console.log(numberElement);
+        const arrayCell = document.querySelectorAll(".single_cell")
+        changeBackground(arrayCell)
     }
 })
 
