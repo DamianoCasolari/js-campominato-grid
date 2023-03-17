@@ -17,6 +17,10 @@
     transition-duration: 0.3s;
 }
 
+.click_background {
+    background: skyblue;
+}
+
 .my_btn:hover {
     background-color: #025e3f;
     color: white;
