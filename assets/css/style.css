@@ -2,10 +2,6 @@
     height: 150px;
 }
 
-#app_main {
-    height: calc(100vh - 250px);
-}
-
 #app_footer {
     height: 100px;
 }
@@ -15,8 +11,29 @@
 
 }
 
+.my_btn {
+    background-color: #7fffd4;
+    border: 1px solid;
+    transition-duration: 0.3s;
+}
+
+.my_btn:hover {
+    background-color: #025e3f;
+    color: white;
+}
+
 .cell {
     width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+    border: 1px solid;
+}
+.cell2 {
+    width: calc(100% / 9);
+    aspect-ratio: 1 / 1;
+    border: 1px solid;
+}
+.cell3 {
+    width: calc(100% / 7);
     aspect-ratio: 1 / 1;
     border: 1px solid;
 }
