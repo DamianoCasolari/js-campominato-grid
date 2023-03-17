@@ -9,7 +9,13 @@ const hard = 49;
 
 function difficulty(select_difficulty) {
     for (let i = 1; i <= select_difficulty; i++) {
+        if (selectEl.value == "easy_lv") {
         containerEl.innerHTML += `<div class="cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`
+        } else if (selectEl.value == "medium_lv"){
+            containerEl.innerHTML += `<div class="cell2 fs-3 d-flex justify-content-center align-items-center">${i}</div>`
+        } else {
+            containerEl.innerHTML += `<div class="cell3 fs-3 d-flex justify-content-center align-items-center">${i}</div>`
+        }
     }
 }
 
