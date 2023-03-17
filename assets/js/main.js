@@ -41,7 +41,7 @@ for (let i = 0; i < arrayElement.length; i++) {
     const singleCell = arrayElement[i]
     singleCell.addEventListener("click", function(){
         this.classList.toggle("click_background")
-        console.log(this)
+        console.log(this.innerText)
     })
 }}
 
