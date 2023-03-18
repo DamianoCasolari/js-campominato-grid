@@ -6,16 +6,32 @@ const easy = 100;
 const medium = 81;
 const hard = 49;
 
+
 function difficulty(select_difficulty) {
     for (let i = 1; i <= select_difficulty; i++) {
+        let cell = `<div class="single_cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+        containerEl.innerHTML +=  cell;
+        let singleCellEl = containerEl.querySelector(".single_cell:last-child");
+
         if (selectEl.value == "easy_lv") {
-            containerEl.innerHTML += `<div class="single_cell cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+            singleCellEl.classList.add("cell");
         } else if (selectEl.value == "medium_lv") {
-            containerEl.innerHTML += `<div class="single_cell cell2 fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+            singleCellEl.classList.add("cell2");
         } else {
-            containerEl.innerHTML += `<div class="single_cell cell3 fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+            singleCellEl.classList.add("cell3");
         }
-    }}
+    }
+}
+// function difficulty(select_difficulty) {
+//     for (let i = 1; i <= select_difficulty; i++) {
+//         if (selectEl.value == "easy_lv") {
+//             containerEl.innerHTML += `<div class="single_cell cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+//         } else if (selectEl.value == "medium_lv") {
+//             containerEl.innerHTML += `<div class="single_cell cell2 fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+//         } else {
+//             containerEl.innerHTML += `<div class="single_cell cell3 fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+//         }
+//     }}
 
     function changeBackground(arrayElement) {
         for (let i = 0; i < arrayElement.length; i++) {
