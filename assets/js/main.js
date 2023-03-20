@@ -7,21 +7,41 @@ const medium = 81;
 const hard = 49;
 
 
+//Declare Function to create the grid
+
 function difficulty(select_difficulty) {
     for (let i = 1; i <= select_difficulty; i++) {
-        let cell = `<div class="single_cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
-        containerEl.innerHTML +=  cell;
-        let singleCellEl = containerEl.querySelector(".single_cell:last-child");
-
+        let classToAdd;
         if (selectEl.value == "easy_lv") {
-            singleCellEl.classList.add("cell");
+            classToAdd = "cell";
         } else if (selectEl.value == "medium_lv") {
-            singleCellEl.classList.add("cell2");
+            classToAdd = "cell2";
         } else {
-            singleCellEl.classList.add("cell3");
+            classToAdd = "cell3";
         }
+        containerEl.innerHTML += `<div class="single_cell fs-3 d-flex justify-content-center align-items-center ${classToAdd}">${i}</div>`;
+        ;
     }
 }
+// ---------------------------- Other possibility of function
+
+// function difficulty(select_difficulty) {
+//     for (let i = 1; i <= select_difficulty; i++) {
+//         let cell = `<div class="single_cell fs-3 d-flex justify-content-center align-items-center">${i}</div>`;
+//         containerEl.innerHTML +=  cell;
+//         let singleCellEl = document.querySelector(".single_cell:last-child");
+
+//         if (selectEl.value == "easy_lv") {
+//             singleCellEl.classList.add("cell");
+//         } else if (selectEl.value == "medium_lv") {
+//             singleCellEl.classList.add("cell2");
+//         } else {
+//             singleCellEl.classList.add("cell3");
+//         }
+//     }
+// }
+// ---------------------- Third possibility of function
+
 // function difficulty(select_difficulty) {
 //     for (let i = 1; i <= select_difficulty; i++) {
 //         if (selectEl.value == "easy_lv") {
@@ -33,6 +53,9 @@ function difficulty(select_difficulty) {
 //         }
 //     }}
 
+// ----------------------------
+
+//Declair Function to add addEventListener to cell of grid
     function changeBackground(arrayElement) {
         for (let i = 0; i < arrayElement.length; i++) {
             const singleCell = arrayElement[i]
@@ -43,6 +66,7 @@ function difficulty(select_difficulty) {
         }
     }
 
+//Event to link btn play to the creation of specific grids
     buttonEl.addEventListener("click", function () {
         containerEl.innerHTML = "";
         if (selectEl.value == "easy_lv") {
